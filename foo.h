@@ -1,4 +1,2 @@
 void foo();
-void bar();
-
 
