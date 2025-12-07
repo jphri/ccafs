@@ -5,7 +5,7 @@ LINKER=$(pwd)/linker
 
 get-hash() 
 {
-	echo -n "$FILES" | cat - $LINKER_FLAGS $LINKER | sha256sum - | cut -f1 -d' '
+	echo -n "$FILES" | cat - $LINKER_FLAGS $LINKER | b3sum - | cut -f1 -d' '
 }
 
 echo $(pwd)/.cache/`get-hash`
