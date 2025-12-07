@@ -6,7 +6,7 @@ COMPILER=$(pwd)/compiler
 
 get-deps()
 {
-	cat $(gcc $(cat compiler-flags) -MM $FILE | sed -e 's/.*: //' -e 's/\\$//' -e 's/^ //' | tr ' ' '\n' | sed '/^$/d' | sort) | b3sum | cut -d' ' -f1
+	cat $(gcc $(cat compiler-flags) -MM $FILE | sed -e 's/.*: //' -e 's/\\$//' -e 's/^ //' | tr ' ' '\n' | sed '/^$/d' | sort)
 }
 
 get-hash() 
